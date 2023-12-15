@@ -1,15 +1,15 @@
 import CoreConcept from "./CoreConcept";
+import Section from "./common/Section";
 
 const CoreConcepts = ({ concepts }) => {
   return (
-    <section id="core-concepts">
-      <h2>Core Concepts</h2>
+    <Section title="Core Concepts" id="core-concepts">
       <ul>
         {concepts.map((concept) => (
           <CoreConcept {...concept} key={concept.id} />
         ))}
       </ul>
-    </section>
+    </Section>
   );
 };
 

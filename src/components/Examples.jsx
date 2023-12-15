@@ -1,18 +1,18 @@
 import { useState } from "react";
 import TabButton from "./TabButton";
+import Section from "./common/Section";
 
 const Examples = ({ examples, concepts }) => {
   const [selectedTab, setSelectedTab] = useState();
 
   const handleSelect = (tab) => setSelectedTab(tab);
 
-  return (
-    <section id="examples">
-      <h2>Examples</h2>
+  const examplesContent = (
+    <>
       <menu>
         {concepts.map((concept) => (
           <TabButton
-            onSelect={() => handleSelect(concept.title)}
+            onClick={() => handleSelect(concept.title)}
             key={concept.id}
             isActive={selectedTab === concept.title}
           >
@@ -30,7 +30,13 @@ const Examples = ({ examples, concepts }) => {
           </pre>
         </div>
       )}
-    </section>
+    </>
+  );
+
+  return (
+    <Section id="examples" title="Examples">
+      {examplesContent}
+    </Section>
   );
 };
 
