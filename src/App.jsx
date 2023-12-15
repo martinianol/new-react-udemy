@@ -33,7 +33,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -56,33 +56,8 @@ function App() {
                 {concept.title}
               </TabButton>
             ))}
-            {/* <TabButton
-              isActive={selectedTab === "components"}
-              onSelect={() => handleSelect("components")}
-            >
-              Components
-            </TabButton>
-            <TabButton
-              isActive={selectedTab === "components"}
-              onSelect={() => handleSelect("jsx")}
-            >
-              JSX
-            </TabButton>
-            <TabButton
-              isActive={selectedTab === "components"}
-              onSelect={() => handleSelect("props")}
-            >
-              Props
-            </TabButton>
-            <TabButton
-              isActive={selectedTab === "components"}
-              onSelect={() => handleSelect("state")}
-            >
-              State
-            </TabButton> */}
           </menu>
-          {tabContent}
-          {/* {!selectedTab && <p>Please select a topic</p>}
+          {!selectedTab && <p>Please select a topic</p>}
           {selectedTab && (
             <div id="tab-content">
               <h3>{EXAMPLES[selectedTab].title}</h3>
@@ -91,10 +66,10 @@ function App() {
                 <code>{EXAMPLES[selectedTab].code}</code>
               </pre>
             </div>
-          )} */}
+          )}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
