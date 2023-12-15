@@ -1,9 +1,10 @@
 import TabButton from "../TabButton";
 
-const Tabs = ({ children, tabButtons }) => {
+const Tabs = ({ children, tabButtons, buttonsContainer = "menu" }) => {
+  const ButtonsContainer = buttonsContainer;
   return (
     <>
-      <menu>{tabButtons}</menu>
+      <ButtonsContainer>{tabButtons}</ButtonsContainer>
       {children}
     </>
   );
